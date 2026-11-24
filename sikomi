@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>プライバシーポリシー・免責事項 ｜ シコミ堂</title>
+<style>
+  body{margin:0;background:#14112a;color:#f3f0ff;line-height:1.9;
+    font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP","Yu Gothic UI",Meiryo,sans-serif}
+  .wrap{max-width:760px;margin:0 auto;padding:40px 20px 60px}
+  a{color:#ffc94a}
+  h1{font-size:26px}
+  h2{font-size:19px;margin-top:36px;border-left:4px solid #ffc94a;padding-left:10px}
+  p,li{color:#d8d2f5}
+  .back{font-size:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="back"><a href="index.html">← トップへ戻る</a></p>
+  <h1>プライバシーポリシー・免責事項</h1>
+
+  <h2>広告の配信について</h2>
+  <p>当サイトでは、第三者配信の広告サービス「Google AdSense」を利用しています。広告配信事業者は、ユーザーの興味に合わせた広告を表示するために Cookie（クッキー）を使用することがあります。Cookie を使うことで、当サイトや他サイトへのアクセス情報にもとづいた広告が配信されます。</p>
+  <p>Cookie を無効にする方法や、Google の広告に関する詳細は、<a href="https://policies.google.com/technologies/ads?hl=ja" rel="noopener">Google の広告に関するポリシー</a>をご覧ください。また、<a href="https://adssettings.google.com/" rel="noopener">広告設定</a>からパーソナライズ広告を無効にできます。</p>
+
+  <h2>アクセス解析ツールについて</h2>
+  <p>当サイトでは、アクセス解析のために Google アナリティクスを利用する場合があります。データの収集には Cookie が使われますが、個人を特定する情報は含まれません。</p>
+  <!-- ↑アクセス解析を使わないなら、この項目は削除 -->
+
+  <h2>お問い合わせで取得する情報</h2>
+  <p>お問い合わせの際にいただいたお名前・メールアドレスなどは、返信のためだけに使い、ほかの目的には使いません。</p>
+
+  <h2>配布ソフトの利用について（免責事項）</h2>
+  <ul>
+    <li>当サイトのソフトは、余興・ドッキリ・演出などの<b>娯楽目的</b>で作られています。</li>
+    <li><b>実際の抽選、懸賞、景品付きキャンペーン、賭け事など、参加者をだます目的での利用は禁止します。</b></li>
+    <li>ソフトの利用によって生じたトラブルや損害について、当サイトは責任を負いません。</li>
+    <li>ソフトは予告なく更新・配布終了することがあります。</li>
+  </ul>
+
+  <h2>著作権</h2>
+  <p>当サイトの文章・画像・配布ソフトの著作権は運営者に帰属します。ソフトの無断での再配布はご遠慮ください。</p>
+
+  <h2>改定</h2>
+  <p>本ポリシーは、必要に応じて予告なく変更することがあります。</p>
+  <p>制定日：2026年11月24日<br>運営者：シコミ堂（<a href="index.html#contact">お問い合わせ</a>）</p>
+</div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>シコミ堂 ｜ 余興・ドッキリ用の仕込みルーレット＆ビンゴツール（Windows・無料）</title>
+<meta name="description" content="パーティーの余興やドッキリ、配信ネタ用の「結果を仕込める」ルーレットとビンゴカード作成ツール。Windows 10/11 対応の無料ソフトです。">
+<!--
+  ▼ Google AdSense：審査に合格したら、下のコメントを外して ca-pub-XXXXXXXXXXXXXXXX を自分のIDに置き換える
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+-->
+<style>
+  :root{
+    --bg:#14112a; --bg2:#1d1940; --card:#231f4d; --line:#3a3470;
+    --text:#f3f0ff; --muted:#b6afd9; --gold:#ffc94a; --pink:#ff6fa8; --mint:#5fe0c2;
+    --warn-bg:#fff4d6; --warn-text:#4a3600;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP","Yu Gothic UI",Meiryo,sans-serif;
+    line-height:1.8;font-size:16px}
+  a{color:var(--gold)}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+
+  /* header */
+  header.top{position:sticky;top:0;z-index:10;background:rgba(20,17,42,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+  .logo{font-weight:800;font-size:20px;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  .logo span{color:var(--gold)}
+  nav a{color:var(--muted);text-decoration:none;margin-left:20px;font-size:14px}
+  nav a:hover{color:var(--text)}
+  @media (max-width:640px){nav a:not(.nav-dl){display:none}}
+
+  /* hero */
+  .hero{padding:72px 0 56px;text-align:center;position:relative;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;pointer-events:none;
+    background:
+      radial-gradient(circle at 12% 20%,var(--pink) 0 4px,transparent 5px),
+      radial-gradient(circle at 85% 30%,var(--gold) 0 5px,transparent 6px),
+      radial-gradient(circle at 70% 80%,var(--mint) 0 4px,transparent 5px),
+      radial-gradient(circle at 25% 75%,var(--gold) 0 3px,transparent 4px),
+      radial-gradient(circle at 50% 10%,var(--mint) 0 3px,transparent 4px);
+    opacity:.8}
+  .tag{display:inline-block;border:1px solid var(--gold);color:var(--gold);border-radius:999px;padding:2px 14px;font-size:13px;letter-spacing:.1em}
+  .hero h1{font-size:clamp(28px,5vw,46px);line-height:1.35;margin:18px 0 14px}
+  .hero h1 em{font-style:normal;color:var(--gold)}
+  .hero p.lead{color:var(--muted);max-width:640px;margin:0 auto 28px}
+  .btn{display:inline-block;background:var(--gold);color:#241a00;font-weight:700;text-decoration:none;
+    padding:12px 28px;border-radius:10px;transition:transform .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line);margin-left:8px}
+  .req{margin-top:16px;font-size:13px;color:var(--muted)}
+
+  /* notice */
+  .notice{background:var(--warn-bg);color:var(--warn-text);border-radius:12px;padding:18px 22px;margin:0 auto 8px;max-width:820px;font-size:15px}
+  .notice strong{display:block;font-size:16px;margin-bottom:4px}
+
+  section{padding:56px 0}
+  h2{font-size:26px;margin:0 0 8px}
+  .sub{color:var(--muted);margin:0 0 28px}
+
+  /* apps */
+  .apps{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px}
+  .app{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+  .shot{aspect-ratio:16/10;background:var(--bg2);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:13px;border-bottom:1px solid var(--line)}
+  .shot img{width:100%;height:100%;object-fit:cover;object-position:left top}
+  .app .body{padding:20px;display:flex;flex-direction:column;flex:1}
+  .app h3{margin:0 0 4px;font-size:20px}
+  .app .kind{font-size:12px;color:var(--mint);letter-spacing:.08em}
+  .app ul{padding-left:1.2em;margin:10px 0 16px;color:var(--muted);font-size:14px}
+  .app .uses{font-size:13px;color:var(--muted);margin-bottom:16px}
+  .app .uses b{color:var(--text)}
+  .app .dl{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:10px}
+  .app .meta{font-size:12px;color:var(--muted)}
+  .app .btn{padding:9px 18px;font-size:14px}
+
+  /* ads */
+  .ad-slot{margin:8px auto;max-width:970px;min-height:100px;border:1px dashed var(--line);border-radius:8px;
+    display:flex;align-items:center;justify-content:center;color:var(--line);font-size:12px}
+
+  /* steps */
+  .steps{counter-reset:s;display:grid;gap:14px}
+  .step{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 20px 16px 64px;position:relative}
+  .step::before{counter-increment:s;content:counter(s);position:absolute;left:18px;top:16px;width:32px;height:32px;border-radius:50%;
+    background:var(--gold);color:#241a00;font-weight:800;display:flex;align-items:center;justify-content:center}
+  .step b{display:block}
+  .step span{color:var(--muted);font-size:14px}
+  .step .shot-sm{margin-top:10px;max-width:420px;aspect-ratio:16/9;background:var(--bg2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--muted)}
+
+  /* faq */
+  details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 20px;margin-bottom:12px}
+  summary{cursor:pointer;font-weight:700}
+  details p{color:var(--muted);margin:10px 0 0;font-size:15px}
+
+  /* table */
+  table{width:100%;border-collapse:collapse;font-size:15px}
+  th,td{border-bottom:1px solid var(--line);padding:10px 8px;text-align:left;vertical-align:top}
+  th{color:var(--muted);font-weight:600;width:30%}
+
+  .log li{margin-bottom:6px;color:var(--muted)}
+  .log time{color:var(--text);margin-right:10px;font-variant-numeric:tabular-nums}
+
+  footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-size:13px;text-align:center}
+  footer a{color:var(--muted);margin:0 10px}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#">シコミ<span>堂</span></a>
+    <nav>
+      <a href="#apps" class="nav-dl">ダウンロード</a>
+      <a href="#howto">使い方</a>
+      <a href="#faq">よくある質問</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <span class="tag">余興・ドッキリ・配信ネタ用</span>
+      <h1>「まさかの当たり」を<br><em>仕込める</em>ルーレット＆ビンゴ</h1>
+      <p class="lead">誕生日の主役にだけ大当たり、罰ゲームは必ずあの人に。<br>
+        出る数字や景品をあらかじめ決めておける、パーティーを盛り上げるネタ用ツール集です。</p>
+      <a class="btn" href="#apps">無料でダウンロード</a>
+      <a class="btn ghost" href="#howto">使い方を見る</a>
+      <p class="req">対応OS：Windows 10 / 11（64bit） ／ 料金：無料</p>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="notice" role="note">
+      <strong>⚠ ご利用前にお読みください</strong>
+      このサイトのツールは、<b>結果をあらかじめ決めておく「仕込み」専用</b>です。余興・ドッキリ・マジック・配信の演出など、
+      参加者みんなが楽しめる場でお使いください。<b>実際の抽選や懸賞、景品付きキャンペーン、お金や物を賭ける場では絶対に使わないでください。</b>
+      参加者をだます使い方は、法律（景品表示法など）に触れたり、トラブルの原因になったりします。
+    </div>
+  </div>
+
+  <!-- 広告枠①（ヒーロー下） -->
+  <div class="wrap">
+    <div class="ad-slot">広告枠（AdSense合格後にここへ広告コードを貼る）
+      <!--
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="1111111111" data-ad-format="auto" data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      -->
+    </div>
+  </div>
+
+  <section id="apps">
+    <div class="wrap">
+      <h2>ツール一覧</h2>
+      <p class="sub">どれもインストール不要。ダウンロードしてダブルクリックするだけで起動します。</p>
+
+      <div class="apps">
+        <!-- アプリ①：神展開ビンゴ PRO -->
+        <article class="app">
+          <div class="shot"><img src="img/bingo-card.png" alt="神展開ビンゴ PRO の画面。仕込みカードの一覧と設定パネル" loading="lazy"></div>
+          <div class="body">
+            <span class="kind">BINGO CARD MAKER</span>
+            <h3>神展開ビンゴ PRO</h3>
+            <ul>
+              <li>「27番目で3人、28番目で3人ビンゴ」のように、何番目に何人当たるかを決めてカードを自動作成</li>
+              <li>新歓コンパ・合宿・追いコン・学祭向けのワンクリックプリセット</li>
+              <li>シミュレーターで本番前に流れを確認、幹事用カンペも出せる</li>
+              <li>A4印刷用PDFをそのまま出力</li>
+            </ul>
+            <p class="uses"><b>使いどころ：</b>サークルの追いコンで卒業生だけが一斉にビンゴ、主役が最後に逆転する誕生日会</p>
+            <div class="dl">
+              <span class="meta">v1.0 ／ 約18.6MB</span>
+              <a class="btn" href="downloads/kamitenkai-bingo-pro.zip">ダウンロード</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- アプリ②：BINGO ROULETTE -->
+        <article class="app">
+          <div class="shot"><img src="img/number-roulette.png" alt="BINGO ROULETTE の管理パネルと表示画面" loading="lazy"></div>
+          <div class="body">
+            <span class="kind">BINGO NUMBER</span>
+            <h3>BINGO ROULETTE</h3>
+            <ul>
+              <li>スクリーン用の表示画面と、手元の管理パネルの2画面構成</li>
+              <li>画面で回る数字と、実際に出る数字を別々に設定できる</li>
+              <li>入力した順番どおりに出す／毎回ランダム、を切り替え</li>
+              <li>効果音（WAV）、当選履歴、全画面表示（F11）</li>
+            </ul>
+            <p class="uses"><b>使いどころ：</b>「神展開ビンゴ PRO」と組み合わせて、狙った展開どおりにビンゴ大会を進行</p>
+            <div class="dl">
+              <span class="meta">v1.0 ／ 約11.6MB</span>
+              <a class="btn" href="downloads/bingo-roulette.zip">ダウンロード</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- アプリ③：文化祭ルーレット -->
+        <article class="app">
+          <div class="shot"><img src="img/prize-wheel.png" alt="文化祭ルーレットの管理パネルと回転ルーレット画面" loading="lazy"></div>
+          <div class="body">
+            <span class="kind">FORTUNE WHEEL</span>
+            <h3>文化祭ルーレット</h3>
+            <ul>
+              <li>くるくる回る円盤型ルーレット。項目ごとに画像と出やすさ（比率）を設定</li>
+              <li>管理パネルから「次に止まる項目」を指定できる</li>
+              <li>減速時間は短・中・長の3段階。中身を隠すミステリーモードも</li>
+              <li>効果音・全画面表示・設定の保存と読込</li>
+            </ul>
+            <p class="uses"><b>使いどころ：</b>罰ゲーム決め、配信の企画、飲み会でのドッキリ</p>
+            <div class="dl">
+              <span class="meta">v1.0 ／ 約25.7MB</span>
+              <a class="btn" href="downloads/fortune-wheel.zip">ダウンロード</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="howto" style="background:var(--bg2)">
+    <div class="wrap">
+      <h2>はじめての起動のしかた</h2>
+      <p class="sub">個人開発の無料ソフトのため、初回は Windows の確認画面が出ます。次の手順で起動できます。</p>
+      <div class="steps">
+        <div class="step"><b>ZIPをダウンロードして展開する</b><span>ダウンロードしたファイルを右クリック →「すべて展開」。</span></div>
+        <div class="step"><b>中の .exe をダブルクリック</b><span>「WindowsによってPCが保護されました」という青い画面が出ることがあります。</span>
+          <div class="shot-sm"><!-- <img src="img/smartscreen-1.png" alt=""> -->青い警告画面のスクショ</div></div>
+        <div class="step"><b>「詳細情報」をクリック</b><span>画面の左上あたりにある小さい文字のリンクです。</span></div>
+        <div class="step"><b>「実行」をクリック</b><span>アプリが起動します。2回目からは確認画面は出ません。</span>
+          <div class="shot-sm"><!-- <img src="img/smartscreen-2.png" alt=""> -->「実行」ボタンのスクショ</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 広告枠②（使い方の下） -->
+  <div class="wrap" style="padding-top:24px">
+    <div class="ad-slot">広告枠
+      <!--
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="2222222222" data-ad-format="auto" data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      -->
+    </div>
+  </div>
+
+  <section id="faq">
+    <div class="wrap">
+      <h2>よくある質問</h2>
+      <details>
+        <summary>ウイルス対策ソフトに「危険」と言われました</summary>
+        <p>このツールは Python で作り、PyInstaller という仕組みで1つの .exe にまとめています。この方法で作ったソフトは、中身に問題がなくても誤ってウイルス扱いされることがあります（誤検知）。
+          心配な方は、ウイルス検査サイト VirusTotal での検査結果をご確認ください：
+          <a href="#">検査結果を見る</a><!-- ←VirusTotalの結果URLを貼る --></p>
+      </details>
+      <details>
+        <summary>Mac やスマホで使えますか？</summary>
+        <p>いまは Windows 10 / 11（64bit）だけに対応しています。Mac・Linux・スマホ・32bit版 Windows では動きません。</p>
+      </details>
+      <details>
+        <summary>本当に無料ですか？</summary>
+        <p>はい、すべて無料です。サイトの運営費は広告収入でまかなっています。</p>
+      </details>
+      <details>
+        <summary>景品の抽選やプレゼント企画に使ってもいいですか？</summary>
+        <p>いいえ。結果を仕込めるツールなので、<b>本物の抽選・懸賞・キャンペーンには使わないでください</b>。参加者が「仕込みかも」と分かって笑える場、ネタだと明かす前提の場でお楽しみください。</p>
+      </details>
+      <details>
+        <summary>アンインストールはどうすればいいですか？</summary>
+        <p>インストールしていないので、展開したフォルダごと削除すれば完了です。</p>
+      </details>
+    </div>
+  </section>
+
+  <section style="background:var(--bg2)">
+    <div class="wrap">
+      <h2>動作環境</h2>
+      <table>
+        <tr><th>OS</th><td>Windows 10 / 11（64bit）</td></tr>
+        <tr><th>インストール</th><td>不要（ZIPを展開して .exe を実行）</td></tr>
+        <tr><th>ネット接続</th><td>不要</td></tr><!-- ←違う場合は書き換え -->
+        <tr><th>料金</th><td>無料</td></tr>
+      </table>
+
+      <h2 style="margin-top:40px">更新履歴</h2>
+      <ul class="log">
+        <li><time>2026-11-24</time>サイトを公開しました。</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <h2>お問い合わせ・不具合報告</h2>
+      <p class="sub">不具合や「こんな仕込みがほしい」というアイデアは、こちらからどうぞ。</p>
+      <p><a href="#">お問い合わせフォーム</a><!-- ←Googleフォームなどのリンクを貼る --> ／ X（旧Twitter）：<a href="#">@your_account</a></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><a href="privacy.html">プライバシーポリシー・免責事項</a><a href="#contact">お問い合わせ</a></p>
+    <p>© 2026 シコミ堂</p>
+  </div>
+</footer>
+
+</body>
+</html>
